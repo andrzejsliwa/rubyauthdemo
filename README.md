@@ -6,6 +6,9 @@ It has drawn inspiration from a number of sources including:
 * [Managing authentication in your Ruby on Rails 5 app with Auth0](https://auth0.com/blog/rails-5-with-auth0/)
 * [How to Use Omniauth to Authenticate your Users](https://code.tutsplus.com/articles/how-to-use-omniauth-to-authenticate-your-users--net-22094)
 * [OmniAuth Strategy for AWS Cognito in Ruby ](https://github.com/Sage/omniauth-cognito-idp)
+* [Github omniauth/omniauth](https://github.com/omniauth/omniauth)
+* [A Ruby gem to load environment variables from `.env`.](https://github.com/bkeepers/dotenv)
+
 
 ## Ruby version
 
