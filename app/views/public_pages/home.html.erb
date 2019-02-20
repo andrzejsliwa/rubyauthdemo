@@ -2,6 +2,10 @@
 
 <p>Please login with one of the providers below:</p>
 
+<% if Rails.env.development? %>
+    <p><%= link_to "Connect with Omniauth Developer flow", "/auth/developer/" %></p>
+<% end %>
+
 <p><%= link_to "Connect with Amazon Cognito", "/auth/cognito-idp" %></p>
 
 <div id="fb-root"><%= link_to "Connect With Facebook", "/auth/facebook" %></div>

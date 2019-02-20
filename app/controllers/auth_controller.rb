@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :callback unless Rails.env.production?
 
   def create
     auth_hash = request.env['omniauth.auth']
@@ -16,15 +17,14 @@ class AuthController < ApplicationController
       session[:user_id] = auth.user.id
    
       render :text => "Welcome #{auth.user.name}!"
-      redirect_to '/dashboard'
     end
+    redirect_to '/dashboard'
   end
 
   # This stores all the user information that came from Auth0
   # and the IdP
   def callback
     session[:userinfo] = request.env['omniauth.auth']
-
     # Redirect to the URL you want after successful auth
     redirect_to '/dashboard'
   end
