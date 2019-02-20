@@ -2,7 +2,7 @@
 
 <p>Please login with one of the providers below:</p>
 
-<% if Rails.env.development? %>
+<% unless Rails.env.production? %>
     <p><%= link_to "Connect with Omniauth Developer flow", "/auth/developer/" %></p>
 <% end %>
 
