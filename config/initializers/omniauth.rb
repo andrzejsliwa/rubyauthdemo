@@ -9,7 +9,8 @@ Rails.application.config.middleware.use OmniAuth::Strategies::CognitoIdP,
     }
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
+  provider :developer, :fields => [:name, :email, :phone, :first_name, :last_name],
+  :uid_field => :last_name unless Rails.env.production?
   provider :facebook, Rails.application.secrets.facebook_app_id, Rails.application.secrets.facebook_app_secret
 end
 

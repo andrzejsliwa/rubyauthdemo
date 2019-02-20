@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # home page
   root 'public_pages#home'
   get '/' => 'auth#new'
+  get '/devauth' => 'dev_auth#show'
   # Dashboard
   get 'dashboard' => 'dashboard#show'
   get   '/login', :to => 'sessions#new', :as => :login
