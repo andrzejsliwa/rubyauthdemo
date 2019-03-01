@@ -1,11 +1,11 @@
 <h1 class="govuk-heading-xl">Demo Auth Ruby App</h1>
 
-<p>Please login with one of the providers below:</p>
+<p class="govuk-body">Please login with one of the providers below:</p>
 
 <% unless Rails.env.production? %>
-    <p><%= link_to "Connect with Omniauth Developer flow", "/devauth/" %></p>
+    <p class="govuk-body"><%= link_to "Connect with Omniauth Developer flow", "/devauth/" %></p>
 <% end %>
 
-<p><%= link_to "Connect with Amazon Cognito", "/auth/cognito-idp" %></p>
+<p class="govuk-body"><%= link_to "Connect with Amazon Cognito", "/auth/cognito-idp" %></p>
 
-<p><%= link_to "Connect With Facebook", "/auth/facebook" %></p>
+<p class="govuk-body"><%= link_to "Connect With Facebook", "/auth/facebook" %></p>
