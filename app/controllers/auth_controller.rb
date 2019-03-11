@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+  # Required for OmniAuth Dev Flow... Not to be used in Production
   skip_before_action :verify_authenticity_token, only: :callback unless Rails.env.production?
 
   def create
@@ -21,7 +22,7 @@ class AuthController < ApplicationController
     redirect_to '/dashboard'
   end
 
-  # This stores all the user information that came from Auth0
+  # This stores all the user information that came from the Auth Provider
   # and the IdP
   def callback
     session[:userinfo] = request.env['omniauth.auth']

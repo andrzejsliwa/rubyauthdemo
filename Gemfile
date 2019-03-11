@@ -65,5 +65,4 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth_openid_connect'
 gem 'omniauth-cognito-idp'
-#gem 'omniauth-keycloak'
 gem 'dotenv-rails', require: 'dotenv/rails-now', group: [:development, :test]
